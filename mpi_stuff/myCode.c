@@ -24,9 +24,10 @@ int main(int argc, char **argv)
         samp_rand(-512.0, 512.0, dim, x);
         double f_val = secret_function(x[0], x[1]);
         if (f_val < local_min) {
-            local_min = f_val;          
+            local_min = f_val;
         }
-        printf("Process %d, sample %ld with f_i = %e\n",rank, i, f_val);
+        // Per-sample printing dominates the runtime; enable only for debugging.
+        // printf("Process %d, sample %ld with f_i = %e\n", rank, i, f_val);
     }
     //  printf("Process %d local minimum = %e\n", rank, local_min);
     double start_time1 = omp_get_wtime();

@@ -1,0 +1,15 @@
+# Compiled binaries (no extension) and objects
+*.o
+*.out
+mpi_stuff/helloMPI
+mpi_stuff/myCode
+omp_stuff/parfor
+omp_stuff/linreg_paral
+omp_stuff/trap_om1
+omp_stuff/trap_omp2
+omp_stuff/trap_omp3
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
